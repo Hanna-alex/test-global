@@ -1,0 +1,181 @@
+.homepage
+  padding: 88px 0 0 0
+  &__wrapper
+    position: relative
+    display: flex
+    justify-content: space-between
+  &__block-text
+    max-width: 597px
+  &__title
+    font-weight: 700
+    font-size: 48px
+    line-height: 65px
+    color: $color-dark
+    width: 474px
+    margin-bottom: 20px
+    span
+      color: $color-hover
+
+  &__description
+    margin-bottom: 30px
+  &__btn
+    @include no-btn
+    @include btn-green
+    margin-bottom: 50px
+    &:hover
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25)
+  &__form
+    margin-bottom: 62px
+
+.form-search
+  position: relative
+  width: 100%
+  height: 62px
+  background: #color-white
+  box-shadow: 0px 20px 30px rgba(222, 222, 222, 0.25)
+  border-radius: 100px
+  overflow: hidden
+
+  &__input
+    padding: 21px 6px 22px 40px
+    width: 100%
+    height: 100%
+    outline: none
+    border: 1px solid transparent
+    font-weight: 400
+    font-size: 16px
+    line-height: 19px
+    letter-spacing: 0.01em
+    border-radius: 100px
+    color: inherit
+    transition: all 0.3s
+    &::placeholder
+      font-family: 'Roboto', sans-serif
+      color: $color_2a
+    &:hover
+      border: 1px solid $color-hover
+      transition: all 0.3s
+    &:focus
+      border: 1px solid $color_green
+      transition: all 0.3s
+  &__btn
+    @include no-btn
+    padding: 15px
+    width: 55px
+    height: 55px
+    position: absolute
+    top: 50%
+    right: 6px
+    transform: translateY(-50%)
+    background: $color_green
+    border-radius: 50%
+    fill: $color-white
+    stroke: $color-white
+    &:hover
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25)
+
+.users
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+
+  &__avatars
+    display: flex
+    margin-right: 12px
+  &__icon
+    position: relative
+    width: 38px
+    height: 38px
+    border: 3px solid $color-white
+    border-radius: 50%
+    &:not(:first-child)
+      margin-left: -16px
+    &_1
+      z-index: 3
+    &_2
+      z-index: 2
+    &_3
+      z-index: 1
+    &_4
+      padding: 7px
+      z-index: 0
+      background: #FF8345
+  &__link
+    font-family: 'Roboto', sans-serif
+    color: $color-hover-bright
+    &:hover
+      border-bottom: 1px dotted $color_green
+
+.animate
+  position: relative
+  display: flex
+  justify-content: center
+  width: 100%
+  &__circle
+    position: absolute
+    top: -25px
+    right: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 450px
+    height: 450px
+    border: 2px solid #E8E8E8
+    border-radius: 50%
+    list-style: none
+    transform-origin: center
+    animation-duration: 8s
+    animation-iteration-count: infinite
+    animation-timing-function: linear
+  &__circle-middle
+    width: 280px
+    height: 280px
+    border-radius: 50%
+    background: $color_green
+  &__flag
+    position: absolute
+    left: -15px
+    transform: all 0.5s
+    width: $flag-w-h
+    height: $flag-w-h
+    border: 5px solid $color-white
+    border-radius: 50%
+    transition: all 0.5s
+    transform: rotate(calc(360deg /8 * var(--r)))
+    transform-origin: 240px
+    scale: 0
+    transition-delay: calc( 0.4s * var(--i) )
+
+    img
+      filter: drop-shadow(0px 10px 30px rgba(148, 148, 148, 0.1))
+      transform: rotate(calc(360deg /-8 * var(--r)))
+      transform-origin: center
+      animation-duration: 8s
+      animation-iteration-count: infinite
+      animation-timing-function: linear
+
+    &:nth-of-type(2)
+      left: -$flag-w-h
+      width: $flag-w-h*2
+      height: $flag-w-h*2
+      transform-origin: 255px
+    &:nth-of-type(3),&:nth-of-type(4)
+      left: -25px
+      width: $flag-w-h+20
+      height: $flag-w-h+20
+      transform-origin: 250px
+
+  &__girl-img
+    position: relative
+    z-index: 6
+    width: 100%
+    height: 100%
+    margin-right: -180px
+    margin-bottom: 0
+
+.form-err
+  color: #ea5b5b
+  position: absolute
+  left: 40px
+  top: 0
+  font-size: 13px

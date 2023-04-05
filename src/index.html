@@ -5,7 +5,99 @@
   <body>
     @@include('components/page-blocks/_header.html')
 
-    <main></main>
+    <main>
+      <section class="homepage">
+        <div class="container">
+          <div class="homepage__wrapper">
+            <div class="homepage__block-text">
+              <h1 class="homepage__title">
+                Now Buy Your PIN&nbsp;or <span>Top Up </span>With&nbsp;Bank
+                Transfer
+              </h1>
+              <p class="homepage__description">
+                We Make international calling simple, relible, and cheap basedon
+                your unique calling behavior.
+              </p>
+              <button class="homepage__btn">Get Started</button>
+              <form action="" class="homepage__form form-search">
+                <span class="form-err"></span>
+                <input
+                  type="text"
+                  name="search"
+                  placeholder="Where do you want to call?"
+                  class="form-search__input"
+                />
+                <button type="submit" class="form-search__btn">
+                  @@include('components/bem-blocks/_svg.html', { "class": "",
+                  "id": "search"})
+                </button>
+              </form>
+
+              <div class="homepage__users users">
+                <div class="users__avatars">
+                  <div class="users__icon users__icon_1">
+                    <img src="img/users_avatar/01.webp" alt="avatar" />
+                  </div>
+                  <!-- /.users__icon -->
+                  <div class="users__icon users__icon_2">
+                    <img src="img/users_avatar/02.webp" alt="avatar" />
+                  </div>
+                  <!-- /.users__icon -->
+                  <div class="users__icon users__icon_3">
+                    <img src="img/users_avatar/03.webp" alt="avatar" />
+                  </div>
+                  <!-- /.users__icon -->
+                  <div class="users__icon users__icon_4">
+                    <img src="img/users_avatar/plus.svg" alt="icon: plus" />
+                  </div>
+                  <!-- /.users__icon -->
+                </div>
+                <!-- /.users__avatars -->
+                <p class="users__text">
+                  45k+ Regular User.
+                  <a href="#" class="users__link">View Price Plan</a>
+                </p>
+              </div>
+              <!-- /.homepage__users -->
+            </div>
+            <!-- /.homepage__block-text -->
+            <div class="homepage__animated-block animate">
+              <ul class="animate__circle">
+                <div class="animate__circle-middle"></div>
+                <!-- /.animate__circle-middle -->
+                <li class="animate__flag" style="--i: 1; --r: 0">
+                  <img src="img/homepage-flags/india.png" alt="Flag: India" />
+                </li>
+                <li class="animate__flag" style="--i: 2; --r: 1">
+                  <img
+                    src="img/homepage-flags/great-britain.png"
+                    alt="Flag: Great Britain"
+                  />
+                </li>
+                <li class="animate__flag" style="--i: 3; --r: 2">
+                  <img src="img/homepage-flags/italy.png" alt="Flag: Italy" />
+                </li>
+                <li class="animate__flag" style="--i: 4; --r: 3">
+                  <img src="img/homepage-flags/india.png" alt="Flag: India" />
+                </li>
+
+                <li class="animate__flag" style="--i: 5; --r: 4">
+                  <img src="img/homepage-flags/india.png" alt="Flag: India" />
+                </li>
+              </ul>
+              <!-- /.animate__circle -->
+              <div class="animate__girl-img">
+                <img src="img/girl.webp" alt="girl photo" />
+              </div>
+              <!-- /.animate__girl-img -->
+            </div>
+            <!-- /.homepage__animated-block -->
+          </div>
+          <!-- /.homepage__wrapper -->
+        </div>
+        <!-- /.container -->
+      </section>
+    </main>
 
     @@include('components/page-blocks/_footer.html')
     @@include('components/page-blocks/_scripts.html')
